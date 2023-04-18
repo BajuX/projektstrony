@@ -1,0 +1,87 @@
+@use '../../variables/colors' as *;
+.nav {
+    overflow: hidden;
+    menu{
+        position: relative;
+    top: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+    transform: scale(2.5);
+        ol{
+            list-style: none;
+            position: relative;
+            transform: skewY(-15deg);
+            height: 100%;
+            li {
+                
+            border: {
+                top: none;
+                left: none;
+                bottom: 1px solid $black;
+                right: 1px solid $black;
+            };
+                position: relative;
+                width: 200px;
+                background: $gray;
+                padding: 15px;
+                cursor: pointer;
+                z-index: var(--i);
+                transition: 0.5s;
+                a {
+                    color: $lighterGray;
+                    text-decoration: none;
+                    padding-left: 10px;
+                    display: block;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                }
+
+                &:hover {
+                    background: $red;
+                    transform: translateX(40px);
+                    a{
+                        color: $black;
+                    }
+                }
+
+                &::before {
+                   content: ' ';
+                   top: 0;
+                   left: -40px;
+                   position: absolute;
+                   width: 40px;
+                   height: 100%; 
+                   background: $black;
+                   transform-origin: right;
+                   transform: skewY(45deg);
+                   transition: 0.5s;
+                }
+
+                &:hover::before{
+                    background: $red;
+                    
+                }
+                &::after{
+                    content: ' ';
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    width: 100%;;
+                    height: 40px;  
+                    background: $black;
+                    transform-origin: bottom;
+                    transform: skewX(45deg);
+                    transition:0.5s;
+                }
+
+                &:hover::after{
+                    
+                    background: $red;
+                }
+            }
+        }
+    }
+}

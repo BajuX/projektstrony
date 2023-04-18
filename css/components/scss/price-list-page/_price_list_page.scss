@@ -1,0 +1,80 @@
+@use '../../variables/colors' as *;
+@use '../../variables/array' as *;
+.pl-header{
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 200px;
+    h1{
+        color: $lighterGray;
+        font-size: 48px;
+        text-align: center;
+
+    }
+
+    h2{
+        color: $lighterGray;
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+.price-main{
+    margin-top: 50px;
+    height: 200vh;
+    width: 100%;
+    .price-list{
+        .item-list{
+            display: flex;
+            height: 25%;
+
+            &+.item-list{
+                margin-top: 10px;
+            }
+            .list-description{
+                width: 50%;
+                padding: 10px;
+                .h3{
+                    color: $lighterGray;
+                    font-size: 52px;
+                }
+
+                h3{
+                    color: $lighterGray;
+                    font-size: 42px;
+                    margin-left: 50px;
+                    span{
+                        color: $red;
+                    }
+                }
+
+                p{
+                    color: $lighterGray;
+                    font-size: 28px;
+                    margin-left: 50px;
+                }
+            }
+
+            .image-list{
+                
+                width: 50%;
+                height: 300px;
+
+               
+            }
+
+            @each $numbe, $link in $links6 {
+                .i#{$numbe}{
+                    background: url("#{$link}");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .i1{
+                height: 370px;
+            }
+        }
+    }
+}

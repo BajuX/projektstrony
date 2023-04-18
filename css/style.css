@@ -1,0 +1,1346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #2b2a2a;
+}
+
+body {
+  min-height: 100vh;
+  background: #2b2a2a;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.header-nav {
+  top: 50px;
+  width: 100%;
+  height: 70px;
+  background: #d4d4d4;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 5%;
+  align-items: center;
+}
+.header-nav .social-icons {
+  display: flex;
+  position: relative;
+  left: -150px;
+  top: 5%;
+}
+.header-nav .social-icons div {
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+}
+.header-nav .social-icons div ion-icon {
+  width: 35px;
+  height: 35px;
+}
+.header-nav ul {
+  display: flex;
+  width: 550px;
+  position: relative;
+  right: -500px;
+}
+.header-nav ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.header-nav ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.header-nav ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: #2b2a2a;
+}
+.header-nav ul li a .text {
+  position: absolute;
+  color: #2b2a2a;
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.header-nav ul li.active a .icon {
+  transform: translateY(-32px);
+}
+.header-nav ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.header-nav ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(0px);
+}
+.header-nav ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(70px);
+}
+.header-nav ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(140px);
+}
+.header-nav ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(210px);
+}
+.header-nav ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(280px);
+}
+.header-nav .indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: #8d0000;
+  border-radius: 50%;
+  border: 6px solid #2b2a2a;
+  transition: 0.5s;
+}
+.header-nav .indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 #2b2a2a;
+  background: transparent;
+}
+.header-nav .indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 #2b2a2a;
+  background: transparent;
+}
+
+footer {
+  width: 100%;
+  height: 20%;
+  background: #181717;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-nav {
+  width: 50%;
+  height: 40%;
+  margin-top: 15px;
+}
+footer .footer-nav ol {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+footer .footer-nav ol li {
+  width: 100px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2b2a2a;
+}
+footer .footer-nav ol li a {
+  text-decoration: none;
+  color: #d4d4d4;
+  text-align: center;
+  padding: 10px;
+}
+footer .footer-nav ol li:hover {
+  background: #656464;
+}
+footer .footer-nav ol li:active {
+  background: #8d0000;
+}
+footer span {
+  color: #d4d4d4;
+  padding: 10px;
+}
+
+header .logo-div {
+  background: #d4d4d4;
+  margin-top: 60px;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo-div .logo {
+  height: 250px;
+}
+
+section .parallax {
+  position: relative;
+  overflow: hidden;
+}
+section .parallax:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateZ(0);
+}
+section #baner {
+  background: url("https://elektrykapradnietyka.com/wp-content/uploads/2023/01/Scangrip-NOVA-4K-CR-400-4000-lm-03.5441-scaled.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+section #baner button {
+  cursor: pointer;
+  position: relative;
+  top: 70%;
+  left: 41%;
+  background: #2b2a2a;
+  width: 330px;
+  height: 70px;
+  border-bottom: 4px #d4d4d4 solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #d4d4d4;
+}
+section #baner button:hover {
+  background: #181717;
+}
+section #baner button:active {
+  background: #8d0000;
+}
+section #baner:before {
+  background-image: url("https://elektrykapradnietyka.com/wp-content/uploads/2023/01/Scangrip-NOVA-4K-CR-400-4000-lm-03.5441-scaled.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+section article {
+  background: #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section article h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+section article p {
+  padding: 25px;
+  width: 50%;
+  text-align: center;
+}
+section #baner2 {
+  background: url("https://fachowisko.pl/wp-content/uploads/1293-scaled.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+section #baner2:before {
+  background-image: url("https://fachowisko.pl/wp-content/uploads/1293-scaled.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+
+section #photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+section #photos .photo {
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.5s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section #photos .photo .black {
+  display: none;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(43, 42, 42, 0.5);
+}
+section #photos .photo:nth-child(1) {
+  background: url("https://www.fachowyelektryk.pl/images/technologie/pomiary/mierniki-i-testery-instalacji-elektrycznej-co-wybrac/mierniki-i-testery-instalacji-elektrycznej-co-wybrac6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section #photos .photo:nth-child(2) {
+  background: url("https://uprawnienia-budowlane.com/wp-content/uploads/2022/08/Nowoczesne-bezpieczniki-apetki.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section #photos .photo:nth-child(3) {
+  background: url("https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/article_show_section_image/y0/gniazdka-elektryczne-nowoczesne.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section #photos .photo h3 {
+  display: none;
+  color: #d4d4d4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section #photos .photo:hover .black {
+  display: block;
+}
+section #photos .photo:hover .black h3 {
+  display: block;
+}
+section #keywords-section {
+  width: 100%;
+  height: 250px;
+}
+section #keywords-section h1 {
+  color: #d4d4d4;
+  text-align: center;
+  font-size: 48px;
+}
+section #keywords-section h2 {
+  color: #d4d4d4;
+  text-align: center;
+  font-size: 28px;
+}
+section #keywords-section .keywords {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section #keywords-section .keywords h3 {
+  color: #d4d4d4;
+  text-align: center;
+  font-size: 18px;
+  width: 20%;
+}
+
+.form {
+  background: #d4d4d4;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form input {
+  width: 300px;
+  height: 50px;
+  background: #2b2a2a;
+  border-bottom: 2px solid #8d0000;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 10px;
+  color: #d4d4d4;
+}
+.form input[type=button] {
+  border: none;
+  cursor: pointer;
+  color: #d4d4d4;
+}
+.form input[type=button]:hover {
+  background: #181717;
+}
+.form input[type=button]:active {
+  background: #8d0000;
+}
+.form input::-moz-placeholder {
+  letter-spacing: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+.form input::placeholder {
+  letter-spacing: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+#grid-section {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  height: 1500px;
+  background: #2b2a2a;
+  grid-template-areas: "slider slider nav" "post1 post2 nav" "post3 post4 post5 ";
+}
+#grid-section .slider {
+  grid-area: slider;
+}
+#grid-section .nav {
+  grid-area: nav;
+  background: #2b2a2a;
+}
+#grid-section .posts {
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+}
+#grid-section .posts .bbackground {
+  position: relative;
+  top: 70%;
+  width: 100%;
+  height: 150px;
+  background: rgba(24, 23, 23, 0.6);
+}
+#grid-section .posts .desc {
+  width: 80%;
+  padding: 10px;
+}
+#grid-section .posts .desc h3 {
+  color: #d4d4d4;
+  font-size: 25px;
+}
+#grid-section .posts .desc p {
+  color: #d4d4d4;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+#grid-section #id1 {
+  grid-area: post1;
+}
+#grid-section #id2 {
+  grid-area: post2;
+}
+#grid-section #id3 {
+  grid-area: post3;
+}
+#grid-section #id4 {
+  grid-area: post4;
+}
+#grid-section #id5 {
+  grid-area: post5;
+}
+#grid-section #id1 {
+  background: url("https://s3.eu-central-1.amazonaws.com/pressland-cms/cache/article_show_section_image/0g/21250787-https-bi.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+#grid-section #id2 {
+  background: url("https://alarmybielsko.pl/wp-content/uploads/2020/03/IMG_20200216_192942.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+#grid-section #id3 {
+  background: url("https://pserwis.pl/wp-content/uploads/2019/10/przemyslowe-instalacje-elektryczne.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+#grid-section #id4 {
+  background: url("https://cdn.galleries.smcloud.net/t/galleries/gf-LR1m-nHhC-v81j_montaz-gniazda-elektrycznego-w-instalacji-podtynkowej-664x442-nocrop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+#grid-section #id5 {
+  background: url("http://elektrykapradnietyka.com/wp-content/uploads/2016/08/instalacja-elektryczna.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* Keyframes animation for the slide movement */
+}
+.slider .slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  overflow: hidden;
+  /* Set background image for each slide */
+}
+.slider .slides .slide {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slide 10s ease infinite alternate;
+}
+.slider .slides .slide:nth-child(1) {
+  background-image: url("https://pserwis.pl/wp-content/uploads/2019/12/modernizacja-i-remonty-instalacji-elektrycznych.jpg");
+}
+.slider .slides .slide:nth-child(2) {
+  background-image: url("https://www.politykabezpieczenstwa.pl/img/artykuly/8/2021_03/instalacja-elektryczna.jpg");
+}
+.slider .slides .slide:nth-child(3) {
+  background-image: url("https://img.freepik.com/darmowe-zdjecie/mezczyzna-technik-elektryk-pracujacy-w-rozdzielnicy-z-bezpiecznikami_169016-24062.jpg?w=2000");
+}
+.slider .slides .slide:nth-child(4) {
+  background-image: url("https://www.quebecelectricien.com/wp-content/uploads/2021/05/electricien-trois-rivieres-services.jpg");
+}
+
+.nav {
+  overflow: hidden;
+}
+.nav menu {
+  position: relative;
+  top: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: scale(2.5);
+}
+.nav menu ol {
+  list-style: none;
+  position: relative;
+  transform: skewY(-15deg);
+  height: 100%;
+}
+.nav menu ol li {
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #181717;
+  border-right: 1px solid #181717;
+  position: relative;
+  width: 200px;
+  background: #2b2a2a;
+  padding: 15px;
+  cursor: pointer;
+  z-index: var(--i);
+  transition: 0.5s;
+}
+.nav menu ol li a {
+  color: #d4d4d4;
+  text-decoration: none;
+  padding-left: 10px;
+  display: block;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.nav menu ol li:hover {
+  background: #8d0000;
+  transform: translateX(40px);
+}
+.nav menu ol li:hover a {
+  color: #181717;
+}
+.nav menu ol li::before {
+  content: " ";
+  top: 0;
+  left: -40px;
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #181717;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+.nav menu ol li:hover::before {
+  background: #8d0000;
+}
+.nav menu ol li::after {
+  content: " ";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #181717;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+.nav menu ol li:hover::after {
+  background: #8d0000;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2b2a2a;
+}
+.body .box {
+  transform: scale(2);
+  position: relative;
+  top: 25px;
+  width: 380px;
+  height: 420px;
+  background: #181717;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.body .box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #8d0000, #8d0000);
+  transform-origin: bottom right;
+  animation: animate 2s linear infinite;
+}
+.body .box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #8d0000, #8d0000);
+  transform-origin: bottom right;
+  animation: animate 2s linear infinite -1s;
+}
+.body .box .sing-in {
+  position: absolute;
+  z-index: 10;
+  inset: 3px;
+  border-radius: 8px;
+  background: #181717;
+  padding: 50px 40px;
+}
+.body .box .sing-in h2 {
+  color: #d4d4d4;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.body .box .sing-in .input-box {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+  z-index: 9;
+}
+.body .box .sing-in .input-box input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #2b2a2a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.body .box .sing-in .input-box input:valid ~ span, .body .box .sing-in .input-box input:focus ~ span {
+  color: #8d0000;
+  transform: translate(0, -34px);
+  font-size: 0.75em;
+}
+.body .box .sing-in .input-box input:valid ~ i, .body .box .sing-in .input-box input:focus ~ i {
+  height: 44px;
+}
+.body .box .sing-in .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0 10px;
+  font-size: 1em;
+  color: #656464;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.body .box .sing-in .input-box i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #8d0000;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.body .box .sing-in .links {
+  display: flex;
+  justify-content: space-between;
+}
+.body .box .sing-in .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #656464;
+  text-decoration: none;
+}
+.body .box .sing-in .links a:hover, .body .box .sing-in .links a:nth-child(2) {
+  color: #8d0000;
+}
+.body .box .sing-in .links .log-me {
+  color: #8d0000;
+}
+.body .box .sing-in input[type=submit] {
+  border: none;
+  outline: none;
+  background: #8d0000;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2b2a2a;
+}
+.body .box2 {
+  transform: scale(1.5);
+  position: relative;
+  top: 25px;
+  width: 380px;
+  height: 560px;
+  background: #181717;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.body .box2::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #8d0000, #8d0000);
+  transform-origin: bottom right;
+  animation: animate 2s linear infinite;
+}
+.body .box2::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, #8d0000, #8d0000);
+  transform-origin: bottom right;
+  animation: animate 2s linear infinite -1s;
+}
+.body .box2 .sing-in {
+  position: absolute;
+  z-index: 10;
+  inset: 3px;
+  border-radius: 8px;
+  background: #181717;
+  padding: 50px 40px;
+}
+.body .box2 .sing-in h2 {
+  color: #d4d4d4;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.body .box2 .sing-in .input-box {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+  z-index: 9;
+}
+.body .box2 .sing-in .input-box input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #2b2a2a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.body .box2 .sing-in .input-box input:valid ~ span, .body .box2 .sing-in .input-box input:focus ~ span {
+  color: #8d0000;
+  transform: translate(0, -34px);
+  font-size: 0.75em;
+}
+.body .box2 .sing-in .input-box input:valid ~ i, .body .box2 .sing-in .input-box input:focus ~ i {
+  height: 44px;
+}
+.body .box2 .sing-in .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0 10px;
+  font-size: 1em;
+  color: #656464;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.body .box2 .sing-in .input-box i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #8d0000;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.body .box2 .sing-in .links {
+  display: flex;
+  justify-content: space-between;
+}
+.body .box2 .sing-in .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #656464;
+  text-decoration: none;
+}
+.body .box2 .sing-in .links .log-me {
+  color: #8d0000;
+}
+.body .box2 .sing-in input[type=submit] {
+  border: none;
+  outline: none;
+  background: #8d0000;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cv-header {
+  margin-top: 50px;
+}
+.cv-header h1 {
+  color: #8d0000;
+  text-align: center;
+}
+.cv-header h3 {
+  color: #d4d4d4;
+  text-align: center;
+}
+.cv-header h3 a {
+  color: #8d0000;
+}
+
+.cv-body {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+}
+.cv-body .container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  background: #656464;
+  margin: 50px;
+  box-shadow: 0 50px 75px rgba(24, 23, 23, 0.2);
+  border-left: 50px solid #656464;
+  border-right: 50px solid #656464;
+}
+.cv-body .container .top {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 40px;
+  padding-bottom: 0;
+}
+.cv-body .container .top .imgBx {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.cv-body .container .top .imgBx .box {
+  position: relative;
+  width: 70%;
+  min-width: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.cv-body .container .top .imgBx .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cv-body .container .top .profileText {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+.cv-body .container .top .profileText h3 {
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  font-weight: 600;
+  color: #d4d4d4;
+}
+.cv-body .container .top .profileText h3 span {
+  position: relative;
+  font-size: 0.5em;
+  font-weight: 300;
+  top: -10px;
+  color: rgba(212, 212, 212, 0.75);
+}
+.cv-body .container .contentBox {
+  position: relative;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 40px 40px;
+}
+.cv-body .container .contentBox h3 {
+  border-left: 4px solid #8d0000;
+  padding-left: 10px;
+  line-height: 1em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #d4d4d4;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.cv-body .container .contentBox ul li {
+  list-style: none;
+  margin: 25px 0;
+  color: #d4d4d4;
+  cursor: pointer;
+  display: flex;
+}
+.cv-body .container .contentBox ul li .text {
+  color: #d4d4d4;
+}
+.cv-body .container .contentBox ul li ion-icon {
+  font-size: 1.2em;
+  margin-right: 10px;
+  color: #8d0000;
+}
+.cv-body .container .contentBox .education li {
+  flex-direction: column;
+  margin: 25px 0;
+}
+.cv-body .container .contentBox .education li h5, .cv-body .container .contentBox .education li h4, .cv-body .container .contentBox .education li h6 > a {
+  color: #d4d4d4;
+}
+.cv-body .container .contentBox .language li {
+  flex-direction: column;
+}
+.cv-body .container .contentBox .language li span {
+  color: #d4d4d4;
+  font-size: 16px;
+  font-weight: 500;
+}
+.cv-body .container .contentBox .language .percent {
+  position: relative;
+  width: 100%;
+  background: #d4d4d4;
+  height: 6px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: block;
+}
+.cv-body .container .contentBox .language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #8d0000;
+}
+.cv-body .container .contentBox .interest {
+  position: relative;
+  display: grid;
+}
+.cv-body .container .contentBox .interest li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.cv-body .container .contentBox .interest li .icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #8d0000;
+  color: #8d0000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cv-body .container .contentBox .interest li .icon ion-icon {
+  color: #d4d4d4;
+}
+.cv-body .container .contentBox .interest h5 {
+  color: #8d0000;
+}
+.cv-body .container .contentBox .interest h4 {
+  color: #d4d4d4;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.cv-body .container .contentBox .interest h6 {
+  font-weight: 300;
+  font-size: 1em;
+}
+.cv-body .container .contentBox .interest h6 a {
+  color: rgba(141, 0, 0, 0.6);
+  text-decoration: none;
+}
+.cv-body .container .contentBox .rightSide {
+  padding-left: 50px;
+}
+.cv-body .container .contentBox .rightSide .about p {
+  color: #d4d4d4;
+}
+.cv-body .container .contentBox .rightSide .about .box h5, .cv-body .container .contentBox .rightSide .about .box h4 {
+  color: #8d0000;
+}
+.cv-body .container .contentBox .rightSide .about + .about {
+  margin-top: -30px;
+}
+
+.iframe-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.iframe-body header h3 {
+  color: #d4d4d4;
+  font-size: 48px;
+}
+
+.opinions {
+  height: 100vh;
+  width: 100%;
+  background: #2b2a2a;
+  display: flex;
+  margin-top: 100px;
+  margin-left: 100px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.opinions .opinion-box {
+  background: #d4d4d4;
+  width: 20%;
+  height: 45%;
+}
+.opinions .opinion-box .k1 {
+  background: url(https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1160,h_600/https://mediasystem.olsztyn.pl/wp-content/uploads/2019/11/instalacje-elektryczne-elektryk-olsztyn.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k2 {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQo0gP9_dlsd0gqMG2tvbXruWveHwIzEGr7Q&usqp=CAU);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k3 {
+  background: url(https://dolata-electric.pl/wp-content/uploads/2022/02/IMG_5892-min-scaled.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k4 {
+  background: url(https://lh3.googleusercontent.com/p/AF1QipMSLPdqVnyjjX4dVOEwOoAQk-Jih3c1uycO4b8=w1080-h608-p-no-v0);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k5 {
+  background: url(https://www.mje-elektryk.pl/img/image_head.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k6 {
+  background: url(https://tefrahouse.pl/wp-content/uploads/2021/02/Instalacje-elektryczne.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k7 {
+  background: url(https://ce8dc832c.cloudimg.io/cdn/n/n@ae2aff9c85e01bc10debefc0fd87bc3f811fed5a/_cs_/2021/02/6024e5ae009c5/instalacjaelektryczna_RD.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .k8 {
+  background: url(https://usterka.pl/wp-content/uploads/2020/07/AdobeStock_181416228-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+.opinions .opinion-box .background .profile-photo {
+  position: relative;
+  top: 75%;
+  left: 5%;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+}
+.opinions .opinion-box .background .p1 {
+  background: url("https://dz9yg0snnohlc.cloudfront.net/advice/images/regain/6125/how-men-fall-in-love-knowing-how-to-read-your-significant-other-1__med.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p2 {
+  background: url("https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p3 {
+  background: url("https://www.ohchr.org/sites/default/files/styles/hero_5_image_desktop/public/2022-11/women-rights-main-image.jpg?itok=RRGl2PFb");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p4 {
+  background: url("https://i0.wp.com/www.wonderslist.com/wp-content/uploads/2021/08/Most-Handsome-Man-in-the-world.jpg?fit=1200%2C675&ssl=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p5 {
+  background: url("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/2589/Emma_Howard_Boyd_2021.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p6 {
+  background: url("https://post.healthline.com/wp-content/uploads/2020/09/low-testosterone-effects-on-body_thumb-1-732x549.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p7 {
+  background: url("https://bostonglobe-prod.cdn.arcpublishing.com/resizer/EJdS2wIUUAIHPR5ruUt0qwQ9V5E=/480x360/filters:focal(850x10:860x0)/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/RDQDLFGCE5G5JE5HZAGIZUYJXQ.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .p8 {
+  background: url("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.opinions .opinion-box .background .text {
+  position: relative;
+  top: 70%;
+}
+.opinions .opinion-box .background .text .person-name {
+  position: relative;
+  left: 25%;
+}
+.opinions .opinion-box .background .text .opinion-text {
+  font-size: 15px;
+  width: 85%;
+  padding-left: 10px;
+}
+
+.pl-header {
+  position: relative;
+  top: 80px;
+  width: 100%;
+  height: 200px;
+}
+.pl-header h1 {
+  color: #d4d4d4;
+  font-size: 48px;
+  text-align: center;
+}
+.pl-header h2 {
+  color: #d4d4d4;
+  font-size: 36px;
+  text-align: center;
+}
+
+.price-main {
+  margin-top: 50px;
+  height: 200vh;
+  width: 100%;
+}
+.price-main .price-list .item-list {
+  display: flex;
+  height: 25%;
+}
+.price-main .price-list .item-list + .item-list {
+  margin-top: 10px;
+}
+.price-main .price-list .item-list .list-description {
+  width: 50%;
+  padding: 10px;
+}
+.price-main .price-list .item-list .list-description .h3 {
+  color: #d4d4d4;
+  font-size: 52px;
+}
+.price-main .price-list .item-list .list-description h3 {
+  color: #d4d4d4;
+  font-size: 42px;
+  margin-left: 50px;
+}
+.price-main .price-list .item-list .list-description h3 span {
+  color: #8d0000;
+}
+.price-main .price-list .item-list .list-description p {
+  color: #d4d4d4;
+  font-size: 28px;
+  margin-left: 50px;
+}
+.price-main .price-list .item-list .image-list {
+  width: 50%;
+  height: 300px;
+}
+.price-main .price-list .item-list .i1 {
+  background: url("https://dobuduj.pl/blog/wp-content/uploads/2019/11/light-45072.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-main .price-list .item-list .i2 {
+  background: url("https://cdn.galleries.smcloud.net/t/galleries/gf-JuW5-eqpY-K2yA_wlaczniki-i-gniazdka-664x442.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-main .price-list .item-list .i3 {
+  background: url("https://www.security.gd.pl/wp-content/uploads/2020/12/security_grudzien2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-main .price-list .item-list .i4 {
+  background: url("https://media.castorama.pl/media/catalog/product/cache/0/image/777x406/17f82f742ffe127f42dca9de82fb58b1/i/c/ico2_przegl_d_instalacji_elektrycznej.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-main .price-list .item-list .i5 {
+  background: url("https://www.wroelectric.pl/images/design/offer-article-3.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-main .price-list .item-list .i6 {
+  background: url("https://elektrycy.warszawa.pl/wp-content/uploads/2019/07/montaz-instalacji-elektrycznej.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-main .price-list .item-list .i1 {
+  height: 370px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,64 @@
+@use '../../variables/colors' as *;
+@use '../../variables/array' as *;
+#grid-section {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  height: 1500px;
+  background: $gray;
+  grid-template-areas:
+    "slider slider nav"
+    "post1 post2 nav"
+    "post3 post4 post5 ";
+
+  .slider {
+    grid-area: slider;
+  }
+
+  .nav {
+    grid-area: nav;
+    background: $gray;
+  }
+
+  .posts {
+    height: 100%;
+    width: 100%; 
+    gap: 20px;
+    .bbackground {
+      position: relative;
+      top: 70%;
+      width: 100%;
+      height: 150px;
+      background: rgba($color: $black, $alpha: 0.6);
+      
+    }
+    .desc{
+      width: 80%;
+      padding: 10px;
+      h3 {
+        color: $lighterGray;
+        font-size: 25px;
+      }
+      p {
+      color: $lighterGray;
+      letter-spacing: 2px;
+      line-height: 20px;
+      }
+    }
+  }
+  @each $number in $array {
+    #id#{$number} {
+      grid-area: post#{$number};
+    }
+  }
+
+  @each $n, $link3 in $links3 {
+    #id#{$n} {
+      background: url("#{$link3}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+  }
+}

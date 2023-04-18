@@ -1,0 +1,64 @@
+@use '../../variables/colors' as *;
+@use '../../variables/array' as *;
+.opinions{
+    height: 100vh;
+    width: 100%;
+    background: $gray;
+    display: flex;
+    margin: {top: 100px; left: 100px;};
+    flex-wrap: wrap;
+    gap: 50px;
+    .opinion-box{
+        background: $lighterGray;
+        width: 20%;
+        height: 45%;
+        @each $n, $link in $links4 {
+            .k#{$n}{
+                background: url(#{$link});
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 50%;
+            }
+        }
+
+        .background{
+            .profile-photo{
+                position: relative;
+                top: 75%;
+                left: 5%;
+                border-radius: 100%;
+                width: 75px;
+                height: 75px;
+            }
+
+            @each $numb, $link in $links5{
+                .p#{$numb}{
+                    background: url("#{$link}");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            .text   {
+                position: relative;
+                top: 70%;
+                .person-name{
+                    position: relative;
+                    left: 25%;
+                }
+
+                .opinion-text{
+                    font-size: 15px;
+                    width: 85%;
+                    padding-left: 10px;
+                }
+            }
+        }
+     
+        
+    }
+}
+

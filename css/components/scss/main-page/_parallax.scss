@@ -1,0 +1,91 @@
+@use '../../variables/colors' as *;
+section {
+  .parallax {
+    position: relative;
+    overflow: hidden;
+  }
+  .parallax:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(0);
+  }
+
+  #baner {
+    background: url("https://elektrykapradnietyka.com/wp-content/uploads/2023/01/Scangrip-NOVA-4K-CR-400-4000-lm-03.5441-scaled.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+
+    button {
+      cursor: pointer;
+      position: relative;
+      top: 70%;
+      left: 41%;
+      background: $gray;
+      width: 330px;
+      height: 70px;
+
+      border: {
+        bottom: 4px $lighterGray solid;
+        top: none;
+        left: none;
+        right: none;
+      }
+
+      color: $lighterGray;
+
+      &:hover {
+        background: $black;
+      }
+
+      &:active {
+        background: $red;
+      }
+    }
+  }
+  #baner:before {
+    background-image: url("https://elektrykapradnietyka.com/wp-content/uploads/2023/01/Scangrip-NOVA-4K-CR-400-4000-lm-03.5441-scaled.jpg");
+    transform: translateZ(-1px) scale(2);
+  }
+
+  article {
+    background: $lighterGray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    p {
+      padding: 25px;
+      width: 50%;
+      text-align: center;
+    }
+  }
+
+  #baner2 {
+    background: url("https://fachowisko.pl/wp-content/uploads/1293-scaled.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
+
+  #baner2:before {
+    background-image: url("https://fachowisko.pl/wp-content/uploads/1293-scaled.jpg");
+    transform: translateZ(-1px) scale(2);
+  }
+}

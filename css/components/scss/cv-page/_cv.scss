@@ -1,0 +1,279 @@
+@use '../../variables/colors' as *;
+
+
+.cv-header{
+    margin-top: 50px;
+    h1{
+        color: $red;
+        text-align: center;
+    }
+
+    h3{
+        color: $lighterGray;
+        text-align: center;
+        a{
+            color: $red;
+        }
+    }
+}
+
+.cv-body {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        background: $lightGray;
+        margin: 50px;
+        box-shadow: 0 50px 75px rgba($color: $black, $alpha: 0.2);
+
+        border: {
+            left: 50px solid $lightGray;
+            right: 50px solid $lightGray;
+        }
+
+        .top {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 40px;
+            padding-bottom: 0;
+
+            .imgBx {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .box {
+                    position: relative;
+                    width: 70%;
+                    min-width: 200px;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    aspect-ratio: 1;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .profileText {
+                position: relative;
+                padding: 40px;
+                display: flex;
+                align-items: center;
+
+                h3 {
+                    font-size: 3em;
+                    letter-spacing: 0.1em;
+                    line-height: 1.2em;
+                    font-weight: 600;
+                    color: $lighterGray;
+
+                    span {
+                        position: relative;
+                        font-size: 0.5em;
+                        font-weight: 300;
+                        top: -10px;
+                        color: rgba($color: $lighterGray, $alpha: 0.75);
+                    }
+                }
+            }
+
+
+        }
+
+        .contentBox {
+            position: relative;
+            min-height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 0 40px 40px;
+
+            h3 {
+                border: {
+                    left: 4px solid $red
+                }
+
+
+
+                padding: {
+                    left: 10px
+                }
+
+
+                line-height: 1em;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                color: $lighterGray;
+                margin-bottom: 20px;
+                margin-top: 50px;
+            }
+
+            ul {
+                li {
+                    list-style: none;
+                    margin: 25px 0;
+                    color: $lighterGray;
+                    cursor: pointer;
+                    display: flex;
+
+                    .text {
+                        color: $lighterGray;
+                    }
+
+                    ion-icon {
+                        font-size: 1.2em;
+
+                        margin: {
+                            right: 10px
+                        }
+
+                        ;
+                        color: $red;
+                    }
+                }
+            }
+
+            .education {
+
+                li {
+                    flex-direction: column;
+                    margin: 25px 0;
+                   h5, h4, h6 > a{
+                    color: $lighterGray;
+                   }
+                }
+            }
+
+            .language {
+                li {
+                    flex-direction: column;
+                    
+
+
+                    span {
+                        color: $lighterGray;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+
+                .percent {
+                    position: relative;
+                    width: 100%;
+                    background: $lighterGray;
+                    height: 6px;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    display: block;
+
+                    div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        background: $red;
+                    }
+                }
+            }
+
+            .interest {
+                position: relative;
+                display: grid;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin: 20px 0;
+
+                    .icon {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        background: $red;
+                        color: $red;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        ion-icon {
+                            color: $lighterGray;
+
+                        }
+                    }
+                }
+
+                h5 {
+                    color: $red;
+                }
+
+                h4 {
+                    color: $lighterGray;
+                    font-weight: 500;
+                    margin: 5px 0;
+                }
+
+                h6 {
+                    a {
+                        color: rgba($color: $red, $alpha: 0.6);
+                        text-decoration: none;
+                    }
+
+                    font-weight: 300;
+                    font-size: 1em;
+                }
+            }
+
+            .rightSide{
+                padding: {left: 50px};
+                .about{
+                   
+                    p{
+                        color: $lighterGray;
+                    
+                    }
+
+                    .box {
+                        h5, h4{
+                            color: $red;
+                        }
+                    }
+
+                    &+.about{
+                        margin-top: -30px;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+.iframe-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    header{
+        h3{
+            color: $lighterGray;
+            font-size: 48px;
+        }
+    }
+}

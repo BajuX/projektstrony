@@ -1,0 +1,64 @@
+@use '../../variables/colors' as *;
+@use '../../variables/array' as *;
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+
+  100%{
+    transform: translateX(-300%);
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    overflow: hidden;
+    .slide {
+      flex: 1;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slide 10s ease infinite alternate;
+      @each $number, $link in $links2 {
+        &:nth-child(#{$number}) {
+          background-image: url('#{$link}');
+        }
+      }
+    }
+
+    /* Set background image for each slide */
+    
+  }
+
+  /* Keyframes animation for the slide movement */
+  
+}

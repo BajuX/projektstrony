@@ -1,0 +1,15 @@
+@use '../../variables/colors' as *;
+header {
+  .logo-div {
+    background: $lighterGray;
+    margin-top: 60px;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      height: 250px;
+    }
+  }
+}

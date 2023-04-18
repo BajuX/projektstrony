@@ -1,0 +1,48 @@
+@use '../variables/colors' as *;
+
+footer {
+    width: 100%;
+    height: 20%;
+    background: $black;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-nav{
+        width: 50%;
+        height: 40%;
+        margin-top: 15px;
+        ol {
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            li {
+                a{
+                    text-decoration: none;
+                    color: $lighterGray;
+                    text-align: center;
+                    padding: 10px;
+                }
+                width: 100px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $gray;
+                &:hover {
+                    background: $lightGray;
+                }
+                &:active {
+                    background: $red;
+                }
+            }
+        }
+
+    }
+
+    span {
+        color: $lighterGray;
+        padding: 10px;
+    }
+}
